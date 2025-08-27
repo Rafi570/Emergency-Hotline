@@ -35,7 +35,7 @@
                 </div>
                 <div
                     class="flex w-[50px] md:w-[123px] items-center justify-center gap-[14px] bg-[#41ff6b1a] rounded-[50px]">
-                    <p class="text-[12px] md:text-[16px] font-bold">100</p>
+                    <p id="p-coin" class="text-[12px] md:text-[16px] font-bold">99</p>
                     <div><img class="w-[15px] md:w-[30px]" src="./assets/coin.png" alt=""></div>
                 </div>
                 <div
@@ -70,7 +70,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">National Emergency Number</p>
+                            <p class="text-[1.25rem] font-bold" id="p-national">National Emergency Number</p>
                             <p class="text-gray-400 text-[0.95rem]">National Emergency</p>
                             <p class="font-bold text-[25px] mt-2" id="NationalEmergencyNumber">999</p>
                         </div>
@@ -81,8 +81,8 @@
                             <button class="btn flex-1 rounded-[8px] copy-btn"
                                 onclick="copyText('NationalEmergencyNumber')"><i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
-                                    class="fa-solid fa-phone"></i>Call</button>
+                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"
+                                id="call-national"><i class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
 
@@ -96,7 +96,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Police Helpline Number</p>
+                            <p class="text-[1.25rem] font-bold" id="p-police">Police Helpline Number</p>
                             <p class="text-gray-400 text-[0.95rem]">Police</p>
                             <p class="font-bold text-[25px] mt-2" id="police">999</p>
                         </div>
@@ -106,7 +106,7 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('police')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button id='police-btn' class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Fire Service Number</p>
+                            <p class="text-[1.25rem] font-bold" id="p-fire">Fire Service Number</p>
                             <p class="text-gray-400 text-[0.95rem]">Fire Service</p>
                             <p class="font-bold text-[25px] mt-2" id="Fire">999</p>
                         </div>
@@ -131,7 +131,7 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('Fire')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn" id="fire-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -146,9 +146,9 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Ambulance Service</p>
+                            <p class="text-[1.25rem] font-bold" id="p-Ambulance">Ambulance Service</p>
                             <p class="text-gray-400 text-[0.95rem]">Ambulance</p>
-                            <p class="font-bold text-[25px] mt-2" id="Ambulance">1994-999999</p>
+                            <p class="font-bold text-[25px] mt-2" id="Ambulance">1994999999</p>
                         </div>
                         <div class="bg-[#f2f2f2] w-[53px] rounded-sm">
                             <p class="text-center">Health</p>
@@ -156,7 +156,8 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('Ambulance')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button id="Ambulance-btn"
+                                class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -171,7 +172,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Women & Child Helpline</p>
+                            <p class="text-[1.25rem] font-bold" id="p-Women">Women & Child Helpline</p>
                             <p class="text-gray-400 text-[0.95rem]">Women & Child Helpline</p>
                             <p class="font-bold text-[25px] mt-2" id="Women">106</p>
                         </div>
@@ -181,7 +182,7 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('Women')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button id="Women-btn" class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -196,7 +197,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Anti-Corruption Helpline</p>
+                            <p class="text-[1.25rem] font-bold" id="p-Corruption">Anti-Corruption Helpline</p>
                             <p class="text-gray-400 text-[0.95rem]">Anti-Corruption</p>
                             <p class="font-bold text-[25px] mt-2" id="Corruption">109</p>
                         </div>
@@ -206,7 +207,8 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('Corruption')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button id="Corruption-btn"
+                                class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -221,7 +223,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Electricity Helpline</p>
+                            <p class="text-[1.25rem] font-bold" id="p-Electricity">Electricity Helpline</p>
                             <p class="text-gray-400 text-[0.95rem]">Electricity Helpline</p>
                             <p class="font-bold text-[25px] mt-2" id="Electricity">16216</p>
                         </div>
@@ -231,7 +233,8 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('Electricity')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button id="Electricity-btn"
+                                class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -246,7 +249,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Brac Helpline</p>
+                            <p class="text-[1.25rem] font-bold" id="p-brac">Brac Helpline</p>
                             <p class="text-gray-400 text-[0.95rem]">Brac Helpline</p>
                             <p class="font-bold text-[25px] mt-2" id="Brac">16445</p>
                         </div>
@@ -256,7 +259,7 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('Brac')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button id="Brac-btn" class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -271,7 +274,7 @@
                             <div class="heart"><i class="fa-regular fa-heart"></i></div>
                         </div>
                         <div>
-                            <p class="text-[1.25rem] font-bold">Bangladesh Railway Helpline</p>
+                            <p class="text-[1.25rem] font-bold" id="p-Railway">Bangladesh Railway Helpline</p>
                             <p class="text-gray-400 text-[0.95rem]">Bangladesh Railway</p>
                             <p class="font-bold text-[25px] mt-2" id="Railway">163</p>
                         </div>
@@ -281,7 +284,8 @@
                         <div class="flex justify-between items-center gap-2 box-border mt-3">
                             <button class="btn flex-1 rounded-[8px] copy-btn" onclick="copyText('Railway')"><i
                                     class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn flex-1 rounded-[8px] bg-green-700 text-white"><i
+                            <button id="Railway-btn"
+                                class="btn flex-1 rounded-[8px] bg-green-700 text-white call-btn"><i
                                     class="fa-solid fa-phone"></i>Call</button>
                         </div>
                     </div>
@@ -294,13 +298,27 @@
                                 <div><i class="fa-solid fa-clock"></i></div>
                                 <p class="ml-1 text-[18px] font-[600]">Call History</p>
                             </div>
-                            <button class="btn bg-green-700 rounded-3xl text-white">Clear</button>
+                            <button class="btn bg-green-700 rounded-3xl text-white" id="Clear-btn">Clear</button>
                         </div>
+
+                        <div id="history-container"></div>
+
+                        <!-- card container  -->
+                        <!-- 
+                        <div class="flex justify-between items-center bg-gray-100 rounded-lg p-2 mt-3">
+                            <div>
+                                <h6 class="font-semibold text-[18px]">Fire Service Number</h6>
+                                <p class="text-gray-400 text-[14px]">999</p>
+                            </div>
+                            <div>
+                                <p class="text-[14px] text-gray-500">11:36:58 AM</p>
+                            </div>
+                        </div> -->
+
+
                     </div>
                 </div>
             </div>
-
-
         </section>
     </main>
     <footer></footer>
